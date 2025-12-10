@@ -65,7 +65,7 @@ export default function Login() {
                   <Input id="phone" type="tel" placeholder="Contoh: 81234567890" value={phone} onChange={e => setPhone(e.target.value)} className="pl-12" required />
                 </div>
                 <p className="text-xs text-muted-foreground">
-                  Masukkan nomor tanpa angka 0
+                  Masukkan nomor tanpa angka 0 diawal
                 </p>
               </div>
 
