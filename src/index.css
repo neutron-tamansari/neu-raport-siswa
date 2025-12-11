@@ -306,3 +306,24 @@
 .pdf-mode td {
   padding: 6px 8px !important;
 }
+
+/* --- FIX PDF MODE for identity card clarity --- */
+
+.pdf-mode .bg-muted,
+.pdf-mode .bg-muted\/50,
+.pdf-mode .bg-secondary,
+.pdf-mode .bg-secondary\/50 {
+  background-color: hsl(0, 0%, 90%) !important; /* dari 96% jadi 90% supaya tidak pucat */
+}
+
+.pdf-mode [class*="bg-"] {
+  opacity: 1 !important; /* hilangkan efek transparan/50 */
+}
+
+.pdf-mode .text-muted-foreground {
+  color: hsl(0, 0%, 40%) !important; /* teks jadi lebih jelas */
+}
+
+.pdf-mode .text-info {
+  color: hsl(200, 90%, 40%) !important; /* info biru */
+}
