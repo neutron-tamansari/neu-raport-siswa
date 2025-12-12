@@ -105,22 +105,34 @@ export function AttendanceSummary({ attendance }: AttendanceSummaryProps) {
                     {month.bulan} {month.tahun}
                   </TableCell>
                   <TableCell className="text-center">
-                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-success/10 text-success font-bold text-sm">
+                    <span 
+                      className="attendance-badge rounded-full bg-success/10 text-success font-bold text-sm"
+                      style={{ display: 'inline-block', width: '32px', height: '32px', lineHeight: '32px', textAlign: 'center' }}
+                    >
                       {month.hadir}
                     </span>
                   </TableCell>
                   <TableCell className="text-center">
-                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-warning/10 text-warning font-bold text-sm">
+                    <span 
+                      className="attendance-badge rounded-full bg-warning/10 text-warning font-bold text-sm"
+                      style={{ display: 'inline-block', width: '32px', height: '32px', lineHeight: '32px', textAlign: 'center' }}
+                    >
                       {month.sakit}
                     </span>
                   </TableCell>
                   <TableCell className="text-center">
-                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-info/10 text-info font-bold text-sm">
+                    <span 
+                      className="attendance-badge rounded-full bg-info/10 text-info font-bold text-sm"
+                      style={{ display: 'inline-block', width: '32px', height: '32px', lineHeight: '32px', textAlign: 'center' }}
+                    >
                       {month.izin}
                     </span>
                   </TableCell>
                   <TableCell className="text-center">
-                    <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-destructive/10 text-destructive font-bold text-sm">
+                    <span 
+                      className="attendance-badge rounded-full bg-destructive/10 text-destructive font-bold text-sm"
+                      style={{ display: 'inline-block', width: '32px', height: '32px', lineHeight: '32px', textAlign: 'center' }}
+                    >
                       {month.alpha}
                     </span>
                   </TableCell>

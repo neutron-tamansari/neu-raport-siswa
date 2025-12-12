@@ -328,36 +328,22 @@
   color: hsl(200, 90%, 40%) !important;
 }
 
-/* --- FIX PDF: Center numbers in score badges --- */
+/* --- FIX PDF: Center numbers in score badges using line-height --- */
 .pdf-mode .score-badge {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+  display: inline-block !important;
   text-align: center !important;
   vertical-align: middle !important;
-  line-height: 1.2 !important;
-  padding-top: 4px !important;
-  padding-bottom: 4px !important;
 }
 
-/* Fix attendance badges in PDF */
-.pdf-mode .rounded-full {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+/* Fix attendance badges in PDF - use line-height for vertical centering */
+.pdf-mode .attendance-badge {
+  display: inline-block !important;
   text-align: center !important;
-  line-height: 1 !important;
+  vertical-align: middle !important;
 }
 
 /* Fix table cell alignment */
 .pdf-mode td.text-center {
   vertical-align: middle !important;
   text-align: center !important;
-}
-
-.pdf-mode td.text-center > span {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  margin: 0 auto !important;
 }
