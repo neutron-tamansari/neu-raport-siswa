@@ -175,16 +175,34 @@ export function ScoreTable({ title, scores, colorClass, compact = false, isUtbk 
                     
                     return (
                       <TableCell key={subject} className={`text-center ${compact ? 'py-1.5 px-1' : ''}`}>
-                        <span className={`score-badge inline-flex items-center justify-center ${compact ? 'min-w-[40px] px-1.5 py-0.5 text-xs' : 'min-w-[50px] px-2 py-1 text-sm'} rounded-md font-medium ${scoreColorClass}`}>
+                        <span 
+                          className={`score-badge ${compact ? 'text-xs' : 'text-sm'} rounded-md font-medium ${scoreColorClass}`}
+                          style={{ 
+                            display: 'inline-block',
+                            minWidth: compact ? '40px' : '50px',
+                            padding: compact ? '2px 6px' : '4px 8px',
+                            textAlign: 'center',
+                            lineHeight: '1.4'
+                          }}
+                        >
                           {scoreValue ?? '-'}
                         </span>
                       </TableCell>
                     );
                   })}
                   <TableCell className={`text-center ${compact ? 'py-1.5 px-2' : ''}`}>
-                    <span className={`score-badge inline-flex items-center justify-center ${compact ? 'min-w-[45px] px-2 py-0.5 text-xs' : 'min-w-[55px] px-3 py-1 text-sm'} rounded-md font-bold ${
-                      isUtbk ? getUtbkScoreColor(average) : getRegularScoreColor(average)
-                    }`}>
+                    <span 
+                      className={`score-badge ${compact ? 'text-xs' : 'text-sm'} rounded-md font-bold ${
+                        isUtbk ? getUtbkScoreColor(average) : getRegularScoreColor(average)
+                      }`}
+                      style={{ 
+                        display: 'inline-block',
+                        minWidth: compact ? '45px' : '55px',
+                        padding: compact ? '2px 8px' : '4px 12px',
+                        textAlign: 'center',
+                        lineHeight: '1.4'
+                      }}
+                    >
                       {average.toFixed(1)}
                     </span>
                   </TableCell>
