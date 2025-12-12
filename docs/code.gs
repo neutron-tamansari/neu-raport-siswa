@@ -79,14 +79,14 @@ function loginByPhone(phone) {
     nis: 2,          // C
     asalSekolah: 3,  // D
     kelas: 4,        // E
-    foto: 5,         // F - Link foto siswa
-    kurikulum: 6,    // G
-    nomorWA: 7,      // H
-    nomorWAOrangTua: 8, // I
-    email: 9,        // J
-    tanggalLahir: 10, // K
-    rumpun: 11,      // L
-    program: 12,     // M
+    kurikulum: 5,    // F
+    nomorWA: 6,      // G
+    nomorWAOrangTua: 7, // H
+    email: 8,        // I
+    tanggalLahir: 9, // J
+    rumpun: 10,      // K
+    program: 11,     // L
+    foto: 15,        // P - Link foto siswa
     pilihanPTNPertama: 26, // AA
     pilihanPTNKedua: 27    // AB
   };
