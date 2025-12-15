@@ -38,8 +38,7 @@ export function AttendanceSummary({ attendance }: AttendanceSummaryProps) {
           tahun: year,
           hadir: 0,
           sakit: 0,
-          izin: 0,
-          tambahan: 0
+          izin: 0
         };
       }
 
@@ -52,9 +51,6 @@ export function AttendanceSummary({ attendance }: AttendanceSummaryProps) {
           break;
         case 'Izin':
           monthlyData[key].izin++;
-          break;
-        case 'Tambahan':
-          monthlyData[key].tambahan++;
           break;
       }
     });
@@ -96,48 +92,48 @@ export function AttendanceSummary({ attendance }: AttendanceSummaryProps) {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {monthlyAttendance.map((month) => (
-                <TableRow key={`${month.bulan}-${month.tahun}`}>
-                  <TableCell 
-                    className="font-medium cursor-pointer hover:text-primary hover:underline transition-colors"
-                    onClick={() => handleMonthClick(month.bulan, month.tahun)}
-                  >
-                    {month.bulan} {month.tahun}
-                  </TableCell>
-                  <TableCell className="text-center">
-                    <span 
-                      className="attendance-badge rounded-full bg-success/10 text-success font-bold text-sm"
-                      style={{ display: 'inline-block', width: '32px', height: '32px', lineHeight: '32px', textAlign: 'center' }}
-                    >
-                      {month.hadir}
-                    </span>
-                  </TableCell>
-                  <TableCell className="text-center">
-                    <span 
-                      className="attendance-badge rounded-full bg-warning/10 text-warning font-bold text-sm"
-                      style={{ display: 'inline-block', width: '32px', height: '32px', lineHeight: '32px', textAlign: 'center' }}
-                    >
-                      {month.sakit}
-                    </span>
-                  </TableCell>
-                  <TableCell className="text-center">
-                    <span 
-                      className="attendance-badge rounded-full bg-info/10 text-info font-bold text-sm"
-                      style={{ display: 'inline-block', width: '32px', height: '32px', lineHeight: '32px', textAlign: 'center' }}
-                    >
-                      {month.izin}
-                    </span>
-                  </TableCell>
-                  <TableCell className="text-center">
-                    <span 
-                      className="attendance-badge rounded-full bg-purple/10 text-purple font-bold text-sm"
-                      style={{ display: 'inline-block', width: '32px', height: '32px', lineHeight: '32px', textAlign: 'center' }}
-                    >
-                      {month.tambahan}
-                    </span>
-                  </TableCell>
-                </TableRow>
-              ))}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+  {monthlyAttendance.map((month) => (
+    <div
+      key={`${month.bulan}-${month.tahun}`}
+      className="border rounded-lg p-4 hover:shadow transition"
+    >
+      <div
+        className="font-semibold text-lg cursor-pointer hover:text-primary hover:underline"
+        onClick={() => handleMonthClick(month.bulan, month.tahun)}
+      >
+        {month.bulan} {month.tahun}
+      </div>
+
+      <div className="grid grid-cols-3 gap-4 mt-4 text-center">
+        {/* Hadir */}
+        <div>
+          <div className="text-success font-bold text-xl">
+            {month.hadir}
+          </div>
+          <div className="text-sm text-muted-foreground">Hadir</div>
+        </div>
+
+        {/* Sakit */}
+        <div>
+          <div className="text-warning font-bold text-xl">
+            {month.sakit}
+          </div>
+          <div className="text-sm text-muted-foreground">Sakit</div>
+        </div>
+
+        {/* Izin */}
+        <div>
+          <div className="text-info font-bold text-xl">
+            {month.izin}
+          </div>
+          <div className="text-sm text-muted-foreground">Izin</div>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
             </TableBody>
           </Table>
         </div>
