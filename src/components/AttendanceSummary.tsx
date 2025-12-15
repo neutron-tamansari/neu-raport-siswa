@@ -77,55 +77,55 @@ export function AttendanceSummary({ attendance }: AttendanceSummaryProps) {
 
       {/* Content */}
       {monthlyAttendance.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {monthlyAttendance.map((month) => (
-            <div
-              key={`${month.bulan}-${month.tahun}`}
-              className="border rounded-xl p-4 hover:shadow-md transition"
-            >
-              {/* Judul Bulan */}
-              <div
-                onClick={() => handleMonthClick(month.bulan, month.tahun)}
-                className="font-semibold text-lg cursor-pointer hover:text-primary hover:underline"
-              >
-                {month.bulan} {month.tahun}
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+  {monthlyAttendance.map((month) => (
+    <div
+      key={`${month.bulan}-${month.tahun}`}
+      className="border rounded-lg p-3 hover:shadow-sm transition"
+    >
+      {/* Judul Bulan */}
+      <div
+        onClick={() => handleMonthClick(month.bulan, month.tahun)}
+        className="font-semibold text-base cursor-pointer hover:text-primary hover:underline leading-tight"
+      >
+        {month.bulan} {month.tahun}
+      </div>
 
-              {/* Statistik */}
-              <div className="grid grid-cols-3 gap-4 mt-4 text-center">
-                {/* Hadir */}
-                <div>
-                  <div className="w-10 h-10 mx-auto rounded-full bg-success/10 text-success font-bold flex items-center justify-center">
-                    {month.hadir}
-                  </div>
-                  <div className="text-sm mt-1 text-muted-foreground">
-                    Hadir
-                  </div>
-                </div>
-
-                {/* Sakit */}
-                <div>
-                  <div className="w-10 h-10 mx-auto rounded-full bg-warning/10 text-warning font-bold flex items-center justify-center">
-                    {month.sakit}
-                  </div>
-                  <div className="text-sm mt-1 text-muted-foreground">
-                    Sakit
-                  </div>
-                </div>
-
-                {/* Izin */}
-                <div>
-                  <div className="w-10 h-10 mx-auto rounded-full bg-info/10 text-info font-bold flex items-center justify-center">
-                    {month.izin}
-                  </div>
-                  <div className="text-sm mt-1 text-muted-foreground">
-                    Izin
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+      {/* Statistik */}
+      <div className="grid grid-cols-3 gap-3 mt-3 text-center">
+        {/* Hadir */}
+        <div>
+          <div className="w-8 h-8 mx-auto rounded-full bg-success/10 text-success font-bold text-sm flex items-center justify-center">
+            {month.hadir}
+          </div>
+          <div className="text-xs mt-0.5 text-muted-foreground">
+            Hadir
+          </div>
         </div>
+
+        {/* Sakit */}
+        <div>
+          <div className="w-8 h-8 mx-auto rounded-full bg-warning/10 text-warning font-bold text-sm flex items-center justify-center">
+            {month.sakit}
+          </div>
+          <div className="text-xs mt-0.5 text-muted-foreground">
+            Sakit
+          </div>
+        </div>
+
+        {/* Izin */}
+        <div>
+          <div className="w-8 h-8 mx-auto rounded-full bg-info/10 text-info font-bold text-sm flex items-center justify-center">
+            {month.izin}
+          </div>
+          <div className="text-xs mt-0.5 text-muted-foreground">
+            Izin
+          </div>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
       ) : (
         <div className="text-center py-6 text-muted-foreground">
           Belum ada data kehadiran
