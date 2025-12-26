@@ -1,7 +1,7 @@
 import { Student, TestScore, Attendance } from '@/types/student';
 
 // URL Google Apps Script Web App - Hardcoded
-const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwlmtgrWGGk7t2BKa5esz__LpGJKykqCU_VDNTTWwsv1ut8_-Vn2WCrUxksaQjKZ2Iz8g/exec';
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyeGi2An6zFcUWEnIFNTAtePc_UzHOM2to2G6ThAhZHpVdVdYTIXW99_5O2PWFoYgKN/exec';
 
 export interface ApiResponse<T> {
   success: boolean;
