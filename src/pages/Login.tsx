@@ -36,7 +36,7 @@ export default function Login() {
           <div className="flex items-center gap-3">
             <img src={logo} alt="Logo" className="w-12 h-12 rounded-xl object-contain" />
             <div>
-              <h1 className="text-xl font-bold text-foreground">Bubat Hebat</h1>
+              <h1 className="text-xl font-bold text-foreground">Tamansari Berprestasi</h1>
               <p className="text-sm text-muted-foreground">Neu-Raport Digital</p>
             </div>
           </div>
@@ -88,7 +88,7 @@ export default function Login() {
 
       {/* Footer */}
       <footer className="py-4 text-center text-sm text-muted-foreground">
-        <p>© 2026 Neutron Bandung-2</p>
+        <p>© 2026 Neutron Bandung-1</p>
       </footer>
     </div>;
 }
